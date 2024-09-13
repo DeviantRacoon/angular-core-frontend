@@ -1,0 +1,52 @@
+#navbar-toggler-btn {
+  border: none;
+  outline: none;
+
+  &:focus {
+    box-shadow: none;
+  }
+
+  &:focus.collapsed,
+  &:hover.collapsed {
+    transform: rotate(0deg);
+    transition: transform 300ms;
+  }
+
+  &:focus:not(.collapsed) {
+    transform: rotate(90deg);
+    transition: transform 300ms;
+  }
+}
+
+.pulse-btn:hover,
+.pulse-btn:focus {
+  animation: pulse 0.6s ease infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.pulse-btn:active {
+  animation: clickEffect 0.3s ease;
+}
+
+@keyframes clickEffect {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

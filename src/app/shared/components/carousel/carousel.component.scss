@@ -1,0 +1,89 @@
+@import "~swiper/swiper-bundle.css";
+
+.swiper-container {
+  width: 100%;
+  height: 100%; /* Ajusta la altura según el contenedor o contenido */
+  position: relative;
+
+  .swiper-wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Ajusta la altura para ocupar todo el contenedor */
+    
+    .carousel-item {
+      width: 100%;
+      max-width: 100%; /* Asegura que la imagen no exceda el contenedor */
+      height: auto;
+      background-color: #fff; /* Fondo blanco para el contenedor de la imagen */
+      border-radius: 10px; /* Bordes redondeados */
+      overflow: hidden; /* Oculta cualquier desbordamiento de la imagen */
+      position: relative;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra suave */
+      transition: box-shadow 0.3s ease-in-out;
+
+      img {
+        width: 100%;
+        height: auto;
+        object-fit: cover; /* Mantiene la proporción de la imagen y cubre el contenedor */
+        display: block; /* Elimina el espacio debajo de la imagen */
+        border-radius: 10px; /* Bordes redondeados */
+      }
+
+      &:hover {
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada al pasar el ratón */
+      }
+    }
+  }
+
+  /* Paginación */
+  .swiper-pagination {
+    bottom: 10px;
+    text-align: center;
+
+    .swiper-pagination-bullet {
+      width: 12px;
+      height: 12px;
+      background: rgba(0, 123, 255, 0.5); /* Color de las balas */
+      opacity: 0.8;
+      border-radius: 50%;
+      transition: background-color 0.3s ease;
+
+      &-active {
+        background: #007bff; /* Color de la bala activa */
+      }
+    }
+  }
+
+  /* Botones de Navegación */
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: #333;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+
+    &:hover {
+      color: #007bff;
+      background: #f0f0f0;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  .swiper-button-next {
+    right: 10px;
+  }
+
+  .swiper-button-prev {
+    left: 10px;
+  }
+}

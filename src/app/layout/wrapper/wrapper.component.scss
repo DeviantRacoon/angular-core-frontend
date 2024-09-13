@@ -1,0 +1,92 @@
+.main {
+  height: calc(100vh - 66px);
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+.menu-dashboard {
+  transition: width 0.3s ease-in-out;
+  position: absolute;
+  right: 0;
+  margin-left: 14px;
+  height: 100%;
+  z-index: 9;
+
+}
+
+.menu-toggle {
+  position: absolute;
+  top: 50%;
+  right: 0px;
+  transform: translate(50%, -50%);
+  z-index: 10;
+}
+
+.menu-main {
+  position: absolute;
+  transition: width 0.3s ease-in-out, transform 0.3s ease-in-out;
+  height: 100%;
+
+  &.menu-main-hide {
+    transform: translateX(-95%);
+    transition: transform 0.3s ease-in-out, width 0.3s ease-in-out;
+  }
+
+  &.menu-main-hide + .menu-dashboard {
+    transition: width 0.3s ease-in-out;
+    width: 99%;
+    z-index: 9;
+  }
+}
+
+// @media (max-width: 991px) {
+//   // .menu-main {
+//   //   position: absolute;
+//   // }
+
+//   .menu-dashboard {
+//     margin-left: 14px;
+//   }
+// }
+
+/* Transiciones y layout para pantallas pequeñas */
+// @media (max-width: 768px) {
+//   .menu-main {
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+//     width: 60%;
+//     height: 100%;
+//     z-index: 10;
+//     transform: translateX(-100%); /* Oculta el menú inicialmente */
+//   }
+
+//   .menu-main-show {
+//     transform: translateX(0); /* Muestra el menú al activar la clase */
+//   }
+
+//   .menu-dashboard {
+//     width: 100%;
+//   }
+
+//   /* Botón tipo hamburguesa visible solo en pantallas pequeñas */
+//   .menu-toggle {
+//     display: block;
+//     position: fixed;
+//     top: 15px;
+//     left: 15px;
+//     z-index: 20;
+//     font-size: 1.5rem;
+//     background-color: transparent;
+//     border: none;
+//     cursor: pointer;
+//   }
+
+//   /* Oculta el botón de hamburguesa en pantallas grandes */
+//   @media (min-width: 769px) {
+//     .menu-toggle {
+//       display: none;
+//     }
+//   }
+// }

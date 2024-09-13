@@ -1,0 +1,16 @@
+<div class="swiper-container">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide" *ngFor="let image of images">
+      <div class="carousel-item">
+        <img [src]="image" alt="Product Image">
+      </div>
+    </div>
+  </div>
+
+  <!-- Paginación -->
+  <div class="swiper-pagination"></div>
+
+  <!-- Botones de Navegación -->
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
+</div>

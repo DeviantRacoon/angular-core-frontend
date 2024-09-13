@@ -1,0 +1,23 @@
+<section [attr.data-bs-theme]="theme">
+  <app-navbar></app-navbar>
+  <main class="main bg-body-tertiary flex-grow-1 d-flex position-relative">
+
+    <!-- Menú lateral con el side menu angular integrado -->
+    <aside class="menu-main bg-body p-2 col-8 col-sm-5 col-md-3 col-xxl-2" [ngClass]="{'menu-main-hide': !showMenu}"
+      role="navigation" aria-label="Main navigation" [attr.aria-expanded]="showMenu ? 'true' : 'false'"
+      aria-controls="menu-dashboard">
+      <app-side-menu></app-side-menu>
+
+      <!-- Botón de Toggle (hamburguesa) -->
+      <button class="menu-toggle btn border-0 bg-body" type="button" (click)="showMenu = !showMenu"
+        aria-controls="menu-main" [attr.aria-expanded]="showMenu ? 'true' : 'false'" aria-label="Toggle navigation">
+        <i class="fa" [class]=" showMenu ? 'fa-chevron-left' : 'fa-bars' "></i>
+      </button>
+    </aside>
+
+    <div id="menu-dashboard" class="menu-dashboard p-2 col-xxl-10">
+      <h1>Wrapper</h1>
+    </div>
+
+  </main>
+</section>

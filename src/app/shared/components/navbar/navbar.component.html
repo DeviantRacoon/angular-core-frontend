@@ -1,0 +1,76 @@
+<nav class="navbar navbar-expand-lg bg-body-secondary">
+  <div class="container-fluid">
+    <!-- Brand -->
+    <a class="navbar-brand d-inline-flex align-items-center gap-2">
+      <img src="assets/img/logo.png" height="40" alt="Brand Logo" loading="lazy" />
+      <h4>Angular Store</h4>
+    </a>
+
+    <!-- Toggle button -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" id="navbar-toggler-btn">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Collapsible wrapper -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+
+      <div class="navbar-nav justify-content-end me-3 w-100">
+
+        <ul class="list-group list-group-flush text-center mt-2 d-lg-none">
+
+          <li class="btn btn-outline-secondary list-group-item bg-transparent pb-2 border-0">
+            <img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp" class="rounded-circle" height="100"
+              alt="User Avatar" loading="lazy" />
+          </li>
+
+          <button class="btn btn-outline-secondary list-group-item bg-transparent">
+            <i class="fas fa-user"></i>
+            Mi Perfil
+          </button>
+
+          <button class="btn btn-outline-secondary list-group-item bg-transparent">
+            <i class="fas fa-cog"></i>
+            Configuración
+          </button>
+
+          <button class="btn btn-outline-danger w-100 border-0 rounded-0">
+            <i class="fas fa-sign-out-alt"></i>
+            Cerrar Sesión
+          </button>
+
+        </ul>
+
+        <div class="dropdown d-none d-lg-block">
+          <a class="dropdown-toggle d-flex align-items-center hidden-arrow" id="userDropdown" role="button"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp" class="rounded-circle" height="30"
+              alt="User Avatar" loading="lazy" />
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+            <li>
+              <h6 class="dropdown-header">Cuenta</h6>
+            </li>
+            <li><a class="dropdown-item btn btn-outline-secondary">
+                <i class="fas fa-user"></i>
+                Mi Perfil
+              </a></li>
+            <li><a class="dropdown-item btn btn-outline-secondary">
+                <i class="fas fa-cog"></i>
+                Configuración
+              </a></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><a class="btn btn-outline-danger w-100 border-0 rounded-0">
+                <i class="fas fa-sign-out-alt"></i>
+                Cerrar Sesión
+              </a></li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</nav>

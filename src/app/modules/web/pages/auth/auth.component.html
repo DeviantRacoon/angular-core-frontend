@@ -1,0 +1,93 @@
+<section class="full-height bg-body-secondary" [attr.data-bs-theme]="theme">
+  
+  <div class="container">
+    <div class="row justify-content-center">
+
+      <!-- Login Form Section -->
+      <div class="col-12 col-md-6 login-section">
+        <div class="card border-0 shadow-lg py-4 w-100">
+          <div class="text-center mb-4">
+            <figure class="w-100 text-center">
+              <img src="assets/img/logo.png" alt="logo">
+            </figure>
+            <h2 class="card-title mb-2">Bienvenido de nuevo</h2>
+            <p class="mb-4 text-secondary">Por favor, inicia sesión en tu cuenta</p>
+          </div>
+
+          <div class="px-4">
+
+            <!-- Email input -->
+            <div class="input-group mb-3">
+              <span class="input-group-text bg-body-secondary border-0">
+                <i class="fas fa-envelope text-body-secondary"></i>
+              </span>
+              <div class="form-floating flex-grow-1">
+                <input type="email" class="form-control bg-body-secondary border-0" id="floatingInput" name="email"
+                  placeholder="user@example.com" [(ngModel)]="credentials.email" required>
+                <label for="floatingInput" class="text-secondary">Email</label>
+              </div>
+            </div>
+            
+            <!-- Password input with eye toggle -->
+            <div class="input-group mb-3 position-relative">
+              <span class="input-group-text bg-body-secondary border-0">
+                <i class="fas fa-lock text-body-secondary"></i>
+              </span>
+              <div class="form-floating flex-grow-1">
+                <input [type]="showPassword ? 'text' : 'password'" class="form-control bg-body-secondary border-0"
+                  id="floatingPassword" name="password" [(ngModel)]="credentials.password" placeholder="********" required>
+                <label for="floatingPassword" class="text-secondary">Contraseña</label>
+            
+                <!-- Ícono para mostrar/ocultar contraseña -->
+                <i class="fas position-absolute text-secondary"
+                  [class]="{'fa-eye': !showPassword, 'fa-eye-slash': showPassword}" id="togglePassword"
+                  style="right: 10px; top: 50%; transform: translateY(-50%); cursor: pointer;"
+                  (click)="showPassword = !showPassword" aria-label="Mostrar u ocultar contraseña"></i>
+              </div>
+            </div>
+            
+
+            <!-- Remember me checkbox -->
+            <div class="form-check mb-3">
+              <input class="form-check-input" type="checkbox" value="" id="rememberMe">
+              <label class="form-check-label" for="rememberMe">
+                Recordarme
+              </label>
+            </div>
+
+            <!-- Login button -->
+            <div class="d-grid gap-2 mt-3">
+              <button type="submit" class="btn btn-primary btn-lg my-3" (click)="login()">
+
+                <p class="text-center my-0" *ngIf="loginStatus !== 'loading'">Iniciar sesión</p>
+                <div *ngIf="loginStatus === 'loading'" class="spinner-border" role="status">
+                  <span class="visually-hidden">Loading...</span>
+                </div>
+              </button>
+            </div>
+
+            <p *ngIf="loginStatus === 'error'" class="text-danger text-center mb-2">
+              Credenciales incorrectas
+            </p>
+
+          </div>
+
+          <!-- Forgot password -->
+          <div class="text-center mt-4">
+            <a class="link-primary" style="cursor: pointer;">¿Olvidaste tu contraseña?</a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="col-12 col-md-6 d-none d-md-block">
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Background Image Section -->
+  <div class="image-background">
+    <img src="assets/img/bg.png" alt="Illustration">
+  </div>
+</section>

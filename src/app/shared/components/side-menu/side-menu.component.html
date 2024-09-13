@@ -1,0 +1,38 @@
+<aside class="overflow-hidden d-flex flex-column" aria-label="Main navigation" style="height: 100%;">
+  <ul class="list-group flex-grow-1">
+
+    <li class="list-group-item bg-transparent border-0">
+
+      <a class="d-flex align-items-center justify-content-start text-decoration-none" [routerLink]="['/']">
+        <i class="fas fa-border-all fa-2x me-2" aria-label="Dashboard icon"></i>
+        <h4 class="mt-1">Dashboard</h4>
+      </a>
+
+      <hr>
+    </li>
+
+    <div class="accordion flex-grow-1" id="accordionExample">
+      <div class="accordion-item border-0" *ngFor="let menu of menus; let i = index">
+
+        <a class="accordion-button collapsed bg-transparent text-decoration-none pb-2 no-select"
+          data-bs-toggle="collapse" [attr.data-bs-target]="'#collapse' + i" aria-expanded="false"
+          [attr.aria-controls]="'collapse' + i">
+          <i class="fas me-2" [ngClass]="menu.icon"></i>
+          {{menu.name}}
+        </a>
+
+        <div [id]="'collapse' + i" class="accordion-collapse collapse">
+          <div class="accordion-body pt-0" *ngFor="let module of menu.modules">
+
+            <a class="list-group-item list-group-item-action border-0 rounded-pill" [routerLink]="[module.path]">
+              <i class="fas me-2" [ngClass]="module.icon"></i>
+              {{module.name}}
+            </a>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </ul>
+</aside>
