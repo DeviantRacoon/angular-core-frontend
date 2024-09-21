@@ -12,7 +12,6 @@
   margin-left: 14px;
   height: 100%;
   z-index: 9;
-
 }
 
 .menu-toggle {
@@ -27,6 +26,7 @@
   position: absolute;
   transition: width 0.3s ease-in-out, transform 0.3s ease-in-out;
   height: 100%;
+  z-index: 10;
 
   &.menu-main-hide {
     transform: translateX(-95%);

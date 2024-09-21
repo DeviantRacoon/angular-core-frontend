@@ -13,18 +13,13 @@ export class SideMenuComponent {
   }[] = [
       {
         name: 'Configuración',
-        icon: 'fa-cog',
+        icon: 'fas fa-cog',
         modules: [{ name: 'Dashboard', icon: 'fas fa-border-all', path: '/' }],
       },
       {
         name: 'Administración',
         icon: 'fas fa-users-cog',
-        modules: [{ name: 'Users', icon: 'fas fa-folder-tree', path: '/users' }],
-      },
-      {
-        name: 'Reportes',
-        icon: 'fas fa-folder-tree',
-        modules: [{ name: 'Roles', icon: 'fas fa-users-cog', path: '/roles' }],
+        modules: [{ name: 'Listado de usuarios', icon: 'fas fa-users', path: 'administration/users' }],
       },
       {
         name: 'Operación',
@@ -36,4 +31,6 @@ export class SideMenuComponent {
     ];
 
   constructor() { }
+
 }
+

@@ -12,7 +12,7 @@ export const authGuard: CanActivateFn = (route, state) => {
   if (token) {
     return true;
   } else {
-    routeService.navigate(['/web']);
+    routeService.navigate(['web']);
     return false;
   }
 

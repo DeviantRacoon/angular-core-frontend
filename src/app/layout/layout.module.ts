@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { WrapperComponent } from './wrapper/wrapper.component';
-import { NavbarComponent, SideMenuComponent } from '@components/index';
+import { NavbarComponent, SideMenuComponent, ButtonThemeComponent } from '@components/index';
 
 import { LayoutRoutingModule } from './layout-routing.module';
 
@@ -11,11 +11,12 @@ import { LayoutRoutingModule } from './layout-routing.module';
   declarations: [
     WrapperComponent,
     NavbarComponent,
-    SideMenuComponent
+    SideMenuComponent,
   ],
   imports: [
     CommonModule,
-    LayoutRoutingModule
+    LayoutRoutingModule,
+    ButtonThemeComponent
   ]
 })
 export class LayoutModule { }

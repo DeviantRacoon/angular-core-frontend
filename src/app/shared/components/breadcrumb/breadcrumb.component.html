@@ -1,0 +1,18 @@
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb text-body-tertiary">
+    <li class="breadcrumb-item">
+      <i class="fas fa-home me-2"></i>
+      <a class="text-decoration-none" style="cursor: pointer;">Dashboard</a>
+    </li>
+    
+    <li class="breadcrumb-item" *ngIf="currentModule.nameMenu !== ''">
+      <i class="me-2" [classList]="currentModule.iconMenu + ' me-2' "></i>
+      <a class="text-decoration-none" style="cursor: pointer;">{{currentModule.nameMenu}}</a>
+    </li>
+
+    <li class="breadcrumb-item active" *ngIf="currentModule.nameModule !== ''">
+      <i [classList]="currentModule.iconModule + ' me-2' "></i>
+      <a class="text-decoration-none" style="cursor: pointer;">{{currentModule.nameModule}}</a>
+    </li>
+  </ol>
+</nav>

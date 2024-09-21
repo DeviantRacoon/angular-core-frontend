@@ -5,14 +5,13 @@ export const routes: Routes = [
     {
         path: '',
         loadChildren: () => import('@layout/layout.module').then(m => m.LayoutModule),
-        canActivate: [authGuard]
+        canActivate: [authGuard],
+        // redirectTo: 'web',
     },
 
     {
         path: 'web',
         loadChildren: () => import('@modules/web/web.module').then(m => m.WebModule)
     },
-
-    { path: '**', redirectTo: 'web' },
 
 ];

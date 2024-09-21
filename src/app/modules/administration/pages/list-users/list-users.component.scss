@@ -1,0 +1,9 @@
+.accordion-button:focus,
+.accordion-button:not(.collapsed) {
+  box-shadow: none;
+}
+
+.accordion-button {
+  transition: background-color 0.3s ease;
+}
+

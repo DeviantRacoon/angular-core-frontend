@@ -6,8 +6,17 @@ import { WrapperComponent } from './wrapper/wrapper.component';
 const routes: Routes = [
   {
     path: '',
-    component: WrapperComponent
-  }
+    component: WrapperComponent,
+    children: [
+
+      {
+        path: 'administration',
+        loadChildren: () => import('@modules/administration/administration.module').then(m => m.AdministrationModule),
+      },
+
+    ]
+  },
+
 ];
 
 @NgModule({
